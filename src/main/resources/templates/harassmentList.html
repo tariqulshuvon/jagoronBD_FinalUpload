@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+      th:replace="layout :: layout(~{::title}, ~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <title>Harassment List</title>
+</head>
+<body>
+<section>
+    <br><br><br><br>
+    <br><br><br><br>
+    <h3>Harassment List</h3>
+
+    <br><br>
+
+    <table class="table table-bordered" style="background-color:white">
+        <thead>
+        <tr>
+            <th>Your Full Namee</th>
+            <th>By Whom You were harassed</th>
+            <th>Mention the place where you were harassed</th>
+            <th>Email address</th>
+            <th>Your Address</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr th:each="harassment : ${harassment}">
+            <td><span th:text="${harassment.fullName}"></span></td>
+            <td><span th:text="${harassment.byWho}"></span></td>
+            <td><span th:text="${harassment.place}"></span></td>
+            <td><span th:text="${harassment.email}"></span></td>
+            <td><span th:text="${harassment.address}"></span></td>
+            <td><span th:text="${harassment.description}"></span></td>
+        </tr>
+        </tbody>
+    </table>
+
+
+</section>
+</body>
+</html>

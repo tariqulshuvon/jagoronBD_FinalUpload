@@ -1,0 +1,132 @@
+<!doctype html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+        th:replace="layout :: layout(~{::title}, ~{::section})" xmlns="http://www.w3.org/1999/html">
+  <head>
+      <meta charset="UTF-8">
+    <title>Jagoron - Self Defense Books</title>
+
+      <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/starter-template/">
+  </head>
+    
+  <body>
+  <section>
+<br><br><br><br>
+    <main class="container" style="margin-top: 60px;">
+              <!--box-shadow: 0px 4px 4px #dedcdb; -->
+
+
+  <div id="books" style=" margin-top: 90px;">
+
+        <div class="text-center mb-4 mt-4" >
+             <h2 class="display-4" style="font-family: Product Sans, Arial ; margin-bottom: 60px;">Self Defense Books</h2>
+        </div>
+      <div class="row" >
+          <div class="col-lg-2 col-md-3" style="line-height: 30px"  th:each = "book : ${bookList}">
+              <div class="card mb-4 shadow-sm">
+                  <div class="text-center mb-4 mt-4" >
+                      <i class="fa  fa-book fa-2x" ></i>
+
+                      <h5 th:text="${book.name}"></h5>
+                      <p th:text="${book.description}"></p>
+                      <a button type="button" class="btn btn-success btn-sm" href="https://www.pdfdrive.com/krav-maga-for-women-your-ultimate-program-for-self-defense-e176028574.html">Read</a>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+
+    
+
+<!--        <div class="row" >-->
+<!--            <div class="col-md-6 col-lg-6 col-12">-->
+<!--                <div class="card mb-3" >-->
+<!--                    <div class="row g-0">-->
+<!--                      <div class="col-md-4">-->
+<!--                        <img src="..." class="img-fluid rounded-start" alt="...">-->
+<!--                      </div>-->
+<!--                      <div class="col-md-8">-->
+<!--                        <div class="card-body">-->
+<!--                          <h5 class="card-title">Self Defense Book </h5>-->
+<!--                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+<!--                          <a button type="button" class="btn btn-success btn-sm" href="https://www.pdfdrive.com/her-own-hero-the-origins-of-the-womens-self-defense-movement-e200489500.html">Read</a>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--            <div class="col-md-6 col-lg-6 col-12">-->
+<!--                <div class="card mb-3" >-->
+<!--                    <div class="row g-0">-->
+<!--                      <div class="col-md-4">-->
+<!--                        <img src="..." class="img-fluid rounded-start" alt="...">-->
+<!--                      </div>-->
+<!--                      <div class="col-md-8">-->
+<!--                        <div class="card-body">-->
+<!--                          <h5 class="card-title">Self Defense Book </h5>-->
+<!--                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+<!--                          <a button type="button" class="btn btn-success btn-sm" href="https://www.pdfdrive.com/her-own-hero-the-origins-of-the-womens-self-defense-movement-e200489500.html">Read</a>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--        </div>-->
+
+
+<!--        <div class="row">-->
+<!--            <div class="col-md-6 col-lg-6 col-12">-->
+<!--                <div class="card mb-3" >-->
+<!--                    <div class="row g-0">-->
+<!--                      <div class="col-md-4">-->
+<!--                        <img src="..." class="img-fluid rounded-start" alt="...">-->
+<!--                      </div>-->
+<!--                      <div class="col-md-8">-->
+<!--                        <div class="card-body">-->
+<!--                          <h5 class="card-title">Self Defense Book </h5>-->
+<!--                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+<!--                          <a button type="button" class="btn btn-success btn-sm" href="https://www.pdfdrive.com/her-own-hero-the-origins-of-the-womens-self-defense-movement-e200489500.html">Read</a>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--            -->
+<!--            <div class="col-md-6 col-lg-6 col-12">-->
+<!--                <div class="card mb-3" >-->
+<!--                    <div class="row g-0">-->
+<!--                      <div class="col-md-4">-->
+<!--                        <img src="..." class="img-fluid rounded-start" alt="...">-->
+<!--                      </div>-->
+<!--                      <div class="col-md-8">-->
+<!--                        <div class="card-body">-->
+<!--                          <h5 class="card-title">Self Defense Book </h5>-->
+<!--                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+<!--                          <a button type="button" class="btn btn-success btn-sm" href="https://www.pdfdrive.com/her-own-hero-the-origins-of-the-womens-self-defense-movement-e200489500.html">Read</a>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--        </div>-->
+
+      
+      </div>
+
+</main>
+
+<footer class="py-5" style="background-color: #5a1b62; margin-top: 90px;">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; jogoronbd.000webhostapp.com</p>
+    </div>
+  </footer>
+  </body>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.js"></script>
+</html>

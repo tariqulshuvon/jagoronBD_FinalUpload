@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="layout :: layout(~{::title}, ~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Category</title>
+</head>
+<body>
+
+<section>
+    <br><br><br><br><br><br><br><br>
+
+    <div class="container">
+        <h1 style="margin-top: 120px; margin-bottom: 40px;">Harassment Complaint Form</h1>
+        <form  action="#" th:action="@{/harassment/save}" method="post" th:object="${harassment}">
+            <input type="hidden" th:field="*{id}"/>
+
+            <div class="mb-3">
+              <label for="exampleInputName" class="form-label">Your Full Name</label>
+              <input th:field="*{fullName}" type="text" class="form-control" id="exampleInputName" aria-describedby="fullName">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputName2" class="form-label">By Whom You were harassed</label>
+                <input th:field="*{byWho}" type="text" class="form-control" id="exampleInputName2" aria-describedby="fullName">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputPlace" class="form-label">Mention the place where you were harassed</label>
+                <input th:field="*{place}" type="text" class="form-control" id="exampleInputPlace" aria-describedby="fullplace">
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputEmail" class="form-label">Email address</label>
+              <input th:field="*{email}" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputaddress" class="form-label">Your Address</label>
+                <input th:field="*{address}" type="text" class="form-control" id="exampleInputaddress" aria-describedby="fullAddress">
+              </div>
+
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                <textarea th:field="*{description}" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+
+    <footer class="py-5" style="background-color: #5a1b62; margin-top: 90px;">
+        <div class="container">
+          <p class="m-0 text-center text-white">Copyright &copy; jogoronbd.000webhostapp.com</p>
+        </div>
+      </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
