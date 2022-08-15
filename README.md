@@ -12,7 +12,7 @@ jagoronBD Final Project using Springboot, for Therap Java fest-2022.
 - Bootstrap 5.0
 
 # Backend
-- Springboot
+- Java
 
 Spring Web Security is also used in this project.**
 ![jg](https://user-images.githubusercontent.com/66321598/184569717-c9b61994-e975-42a6-b44d-2e1c7c44e3d3.png)
