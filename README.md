@@ -9,6 +9,7 @@ jagoronBD Final Project using Springboot, for Therap Java fest-2022.
 - HTML
 - CSS
 - JS
+- Bootstrap 5.0
 
 # Backend
 - Springboot
@@ -34,9 +35,20 @@ There will be two types of users in the system with different responsibilities a
 They view/read Books on self-defense. They can enroll at Self-defense course. They can
 buy any products those are used for self-defense.
 
-- Admin: can view reported complains of general public. Admin can add/update/delete
-police station Number & location. Admin can add/update/delete courses on self-defense.
-They can add/update/delete Books on self-defense.
+- Admin: can view reported complains of general public. Admin can add/update/delete police station Number & location. Admin can add/update/delete courses on self-defense. They can add/update/delete Books on self-defense.
+
+# Use cases of the system:
+1. Account creation: A general user and the system are the actors of the use case. There are two types of accounts available for creation. These are:
+- Registered user
+- Admin user
+After providing mandatory information to the system, system will create an account of the requested type.
+
+2. Making a complaint: Registered General users can make a complain against a person by whom he/she were harassed. Admin users can be able to view their complains.
+
+3. Self-defense course enrollment: Registered General users can enroll any selfdefense course. Admin user can be able to see who enrolled self-defense course.
+
+4. Purchasing self-defense goods: Registered General users can purchase any self-defense goods. Admin user can add self-defense product. They edit/change
+product price. They are also able to remove any product from the store
 
 
 
